@@ -10,25 +10,12 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!--  외부 스타일 시트 가져오기 -->
+  <link rel="stylesheet" href="/css/style.css">
+  
   <style>
-  .fakeimg {
-    height: 200px;
-    background: #aaa;
-  }
-  .m--profile {
-  	background-image: url(https://picsum.photos/id/1/350);
-  	background-size: cover;
-  	background-position: center;
-  	width: 100%;
-  	height: 200px;
-  }
-  .banner--img{
-  	background-image: url(https://picsum.photos/600);
-  	background-size: cover;
-  	background-position: center;
-  	width: 100%;
-  	height: 100%;
-  }
+
   </style>
 </head>
 <body>
@@ -86,30 +73,3 @@
       </ul>
       <hr class="d-sm-none">
     </div>
-    
-    
-    <!-- todo 여기서부터 main 영역으로 사용 예정  -->
-    <div class="col-sm-8">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-      <br>
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-  </div>
-</div>
-
-<!-- 여기 하단 풋터 사용 예정  -->
-
-<div class="jumbotron text-center" style="margin-bottom:0">
-  <p>Footer</p>
-</div>
-
-</body>
-</html>
