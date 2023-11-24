@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.tenco.bankapp.dto.SignInFormDto;
 import com.tenco.bankapp.dto.SignUpFormDto;
 import com.tenco.bankapp.handler.exception.CustomRestfullException;
 import com.tenco.bankapp.repository.entity.User;
@@ -32,6 +33,17 @@ public class UserService {
 		}
 
 		return resultRowCount;
+
+	}
+
+	public User signIn(SignInFormDto dto) {
+
+		User userEntity = userRepository.findByUsernameAndPassword(dto);
+		if (userEntity == null) {
+			throw new CustomRestfullException("아이디 혹은 비번이 틀렸습니다.", HttpStatus.BAD_REQUEST);
+		}
+
+		return userEntity;
 
 	}
 
