@@ -20,4 +20,17 @@ public class History {
 	private Integer wAccountId;
 	private Integer dAccountId;
 	private Timestamp createdAt;
+
+	// 거래내역 정보 추가
+	private String sender;
+	private String receiver;
+	private Long balance;
+
+	public String formatCreatedAt() {
+		return "";
+	}
+
+	public String formatBalance() {
+		return "" + "원";
+	}
 }

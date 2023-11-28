@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +16,7 @@
 	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-<!-- 외부 스타일 시트 가져오기 -->
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 
@@ -32,11 +33,19 @@
 		</button>
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="navbar-nav">
-				<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="/user/sign-in">SignIn</a>
-				</li>
-				<li class="nav-item"><a class="nav-link" href="/user/sign-up">SignUp</a>
-				</li>
+				<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+				<c:choose>
+					<c:when test="${principal != null}">
+						<li class="nav-item"><a class="nav-link" href="/user/logout">logout</a>
+						</li>
+					</c:when>
+					<c:otherwise>
+						<li class="nav-item"><a class="nav-link" href="/user/sign-in">SignIn</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" href="/user/sign-up">SignUp</a>
+						</li>
+					</c:otherwise>
+				</c:choose>
 			</ul>
 		</div>
 	</nav>
@@ -51,9 +60,10 @@
 				<h3>Some Links</h3>
 				<p>Lorem ipsum dolor sit ame.</p>
 				<ul class="nav nav-pills flex-column">
-					<li class="nav-item"><a class="nav-link active"
-						href="/account/save">계좌생성</a></li>
-					<li class="nav-item"><a class="nav-link" href="/account/list">계좌목록</a></li>
+					<li class="nav-item"><a class="nav-link" href="/account/save">계좌생성</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="/account/list">계좌목록</a>
+					</li>
 					<li class="nav-item"><a class="nav-link"
 						href="/account/withdraw">출금</a></li>
 					<li class="nav-item"><a class="nav-link"

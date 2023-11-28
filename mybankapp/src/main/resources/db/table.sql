@@ -1,4 +1,8 @@
+create database mybank;
+
 -- 유저 테이블 설계 하기 
+drop table user_tb;
+
 create table user_tb(
  id int auto_increment primary key, 
  username varchar(50) not null unique, 
