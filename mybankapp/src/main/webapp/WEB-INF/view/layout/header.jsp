@@ -55,7 +55,17 @@
 			<div class="col-sm-4">
 				<h2>About Me</h2>
 				<h5>Photo of me:</h5>
+				<c:choose>
+					<c:when test="${principal != null}">
+					<img class="m--profile" alt="" src="<c:url value="${principal.setUpUserImage()}"/>">
+				</c:when>
+				<c:otherwise>
 				<div class="m--profile"></div>
+				</c:otherwise>
+				</c:choose>
+				
+				
+				
 				<p>자라나는 코린이에 은행 관리 시스템</p>
 				<h3>Some Links</h3>
 				<p>Lorem ipsum dolor sit ame.</p>
@@ -65,7 +75,7 @@
 					<li class="nav-item"><a class="nav-link" href="/account/list">계좌목록</a>
 					</li>
 					<li class="nav-item"><a class="nav-link"
-						href="/account/withdraw">출금</a></li>
+						href="https://www.naver.com">출금</a></li>
 					<li class="nav-item"><a class="nav-link"
 						href="/account/deposit">입금</a></li>
 					<li class="nav-item"><a class="nav-link"

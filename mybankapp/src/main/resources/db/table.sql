@@ -32,3 +32,9 @@ create table history_tb(
  d_balance bigint comment '입금 요청 후 계좌 잔액',
  created_at timestamp not null default now()
 );
+
+alter table user_tb
+add column origin_file_name varchar(100);
+
+alter table user_tb
+add column upload_file_name varchar(100);

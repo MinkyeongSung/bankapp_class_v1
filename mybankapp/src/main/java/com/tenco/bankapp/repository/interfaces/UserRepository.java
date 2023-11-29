@@ -16,6 +16,9 @@ public interface UserRepository {
 	public User findById(Integer id); // 사용자 조회
 	public List<User> findAll(); // 사용자 전체 조회
 	
-	// 사용자에 이름과 비번으로 조회
+	// 사용자 이름과 비번으로 조회
 	public User findByUsernameAndPassword(SignInFormDto dto);
+	// 사용자 이름만 조회
+	public User findByUsername(SignInFormDto dto);
+	
 }
